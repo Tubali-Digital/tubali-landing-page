@@ -1,9 +1,9 @@
 export const siteDetails = {
-    siteName: 'Finwise',
+    siteName: 'Tubali',
     siteUrl: 'https://finwise-omega.vercel.app/',
     metadata: {
-        title: 'Finwise - Next.js and Tailwind CSS Landing Page Template',
-        description: 'Finwise empowers businesses with cutting-edge technology solutions to drive success and efficiency.',
+        title: 'Tubali - Empowering Your Financial Future',
+        description: 'Save and invest in Naira, USD, USDT, and Gold with a secure, transparent system. Grow your wealth with strategic investments and financial education.',
     },
     language: 'en-us',
     locale: 'en-US',

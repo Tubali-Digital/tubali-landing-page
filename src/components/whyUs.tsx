@@ -5,17 +5,16 @@ import { BiMinus, BiPlus } from "react-icons/bi";
 import SectionTitle from "./SectionTitle";
 import { faqs } from "@/data/faq";
 
-const FAQ: React.FC = () => {
+const WhyChooseUs: React.FC = () => {
     return (
-        <section id="faq" className="py-10 lg:py-20">
+        <section id="join" className="py-10 lg:py-20">
             <div className="flex flex-col lg:flex-row gap-10">
                 <div className="">
-                    <p className="hidden lg:block text-foreground-accent">FAQ&apos;S</p>
                     <SectionTitle>
-                        <h2 className="my-3 !leading-snug lg:max-w-sm text-center lg:text-left">Frequently Asked Questions</h2>
+                        <h2 className="my-3 !leading-snug lg:max-w-sm text-center lg:text-left">Why Choose Us</h2>
                     </SectionTitle>
                     <p className="lg:mt-10 text-foreground-accent text-center lg:text-left">
-                        Ask us anything!
+                        We are committed to providing you with the best service possible. Our team of experts is always available to assist you with any questions or concerns you may have.
                     </p>
                     <a href="mailto:" className="mt-3 block text-xl lg:text-4xl text-secondary font-semibold hover:underline text-center lg:text-left">help@finwise.com</a>
                 </div>
@@ -44,4 +43,4 @@ const FAQ: React.FC = () => {
     );
 };
 
-export default FAQ;
+export default WhyChooseUs;

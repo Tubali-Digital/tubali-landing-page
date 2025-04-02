@@ -1,8 +1,4 @@
 import { ctaDetails } from "@/data/cta"
-
-import AppStoreButton from "./AppStoreButton"
-import PlayStoreButton from "./PlayStoreButton"
-
 const CTA: React.FC = () => {
     return (
         <section id="cta" className="mt-10 mb-5 lg:my-20">
@@ -13,13 +9,36 @@ const CTA: React.FC = () => {
                     </div>
 
                     <div className="h-full flex flex-col items-center justify-center text-white text-center px-5">
-                        <h2 className="text-2xl sm:text-3xl md:text-5xl md:leading-tight font-semibold mb-4 max-w-2xl">{ctaDetails.heading}</h2>
+                        <h2 className="text-2xl sm:text-3xl md:text-5xl md:leading-tight font-semibold mb-4 max-w-4xl">{ctaDetails.heading}</h2>
 
                         <p className="mx-auto max-w-xl md:px-5">{ctaDetails.subheading}</p>
 
+                        <div className="mt-6 flex max-w-md gap-x-4">
+                            <label htmlFor="email-address" className="sr-only">
+                                Email address
+                            </label>
+                            <input
+                                id="email-address"
+                                name="email"
+                                type="email"
+                                required
+                                placeholder="Enter your email"
+                                autoComplete="email"
+                                className="min-w-0 flex-auto rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
+                            />
+                            <button
+                                type="submit"
+                                className="flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-xs hover:bg-gray-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                            >
+                                join Now
+                            </button>
+
+                        </div>
                         <div className="mt-4 flex flex-col sm:flex-row items-center sm:gap-4">
-                        <AppStoreButton />
-                        <PlayStoreButton />
+
+
+                            {/* <AppStoreButton />
+                            <PlayStoreButton /> */}
                         </div>
                     </div>
                 </div>

@@ -1,9 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-
-import AppStoreButton from './AppStoreButton';
-import PlayStoreButton from './PlayStoreButton';
-
 import { heroDetails } from '@/data/hero';
 
 const Hero: React.FC = () => {
@@ -21,12 +17,28 @@ const Hero: React.FC = () => {
             </div>
 
             <div className="text-center">
+                <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+                    <div className="relative rounded-full px-3 py-1 text-sm/6 text-red-600 ring-1 ring-red-900/10 hover:ring-red-900/20">
+                        Comming Soon.{' '}
+                        <a href="#join" className="font-semibold text-indigo-600">
+                            <span aria-hidden="true" className="absolute inset-0" />
+                            Join waiting List...<span aria-hidden="true">&rarr;</span>
+                        </a>
+                    </div>
+                </div>
                 <h1 className="text-4xl md:text-6xl md:leading-tight font-bold text-foreground max-w-lg md:max-w-2xl mx-auto">{heroDetails.heading}</h1>
                 <p className="mt-4 text-foreground max-w-lg mx-auto">{heroDetails.subheading}</p>
-                <div className="mt-6 flex flex-col sm:flex-row items-center sm:gap-4 w-fit mx-auto">
+                {/* <div className="mt-6 flex flex-col sm:flex-row items-center sm:gap-4 w-fit mx-auto">
                     <AppStoreButton dark />
                     <PlayStoreButton dark />
-                </div>
+                </div> */}
+                <button
+                    type="submit"
+                    className="flex-none rounded-md bg-[#050a02] mt-4 px-10 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-[#2b3a22] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                >
+                    join Waiting List
+                </button>
+
                 <Image
                     src={heroDetails.centerImageSrc}
                     width={384}
@@ -36,7 +48,7 @@ const Hero: React.FC = () => {
                     priority={true}
                     unoptimized={true}
                     alt="app mockup"
-                    className='relative mt-12 md:mt-16 mx-auto z-10'
+                    className='relative mt-12 md:mt-16 mx-auto '
                 />
             </div>
         </section>

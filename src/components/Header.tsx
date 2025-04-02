@@ -4,11 +4,12 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import { HiOutlineXMark, HiBars3 } from 'react-icons/hi2';
-import { FaFingerprint } from 'react-icons/fa';
 
 import Container from './Container';
 import { siteDetails } from '@/data/siteDetails';
 import { menuItems } from '@/data/menuItems';
+import { useScrollSpy } from '@/hooks/useScrollSpy';
+import Image from 'next/image';
 
 const Header: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -17,13 +18,30 @@ const Header: React.FC = () => {
         setIsOpen(!isOpen);
     };
 
+    const [pageScroll, setPageScroll] = useState(0)
+
+    React.useEffect(() => {
+        const handleScroll = () => {
+            setPageScroll(window.scrollY)
+        }
+
+        window.addEventListener('scroll', handleScroll)
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    }, [])
+
+    const activeSection = useScrollSpy(["hero", "about", "WHY-US", "services", "join", "contact"], 100);
+
+
     return (
-        <header className="bg-transparent fixed top-0 left-0 right-0 md:absolute z-50 mx-auto w-full">
+        <header className={`fixed inset-x-0 top-0 z-20  ${pageScroll > 10 ? 'backdrop-blur bg-white shadow text-white' : 'bg-transparent'}`}>
             <Container className="!px-0">
                 <nav className="shadow-md md:shadow-none bg-white md:bg-transparent mx-auto flex justify-between items-center py-2 px-5 md:py-10">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2">
-                        <FaFingerprint className="text-foreground min-w-fit w-7 h-7" />
+                        <Image height={30} width={30} src="/images/tubali-logo.png" alt="logo" />
                         <span className="manrope text-xl font-semibold text-foreground cursor-pointer">
                             {siteDetails.siteName}
                         </span>
@@ -33,14 +51,14 @@ const Header: React.FC = () => {
                     <ul className="hidden md:flex space-x-6">
                         {menuItems.map(item => (
                             <li key={item.text}>
-                                <Link href={item.url} className="text-foreground hover:text-foreground-accent transition-colors">
+                                <Link href={item.url} className={`text-foreground hover:text-foreground-accent transition-colors underline-offset-[5px] ${'#' + activeSection === item.url ? 'underline' : ''}`}>
                                     {item.text}
                                 </Link>
                             </li>
                         ))}
                         <li>
                             <Link href="#cta" className="text-black bg-primary hover:bg-primary-accent px-8 py-3 rounded-full transition-colors">
-                                Download
+                                Join Now
                             </Link>
                         </li>
                     </ul>

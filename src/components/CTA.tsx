@@ -1,5 +1,38 @@
+"use client";
+import { useState } from "react";
 import { ctaDetails } from "@/data/cta"
 const CTA: React.FC = () => {
+
+    const [email, setEmail] = useState("");
+    const [loading, setLoading] = useState(false);
+    const [status, setStatus] = useState<string | null>(null);
+    interface SubscribeResponse {
+        error?: string;
+    }
+
+    const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        setLoading(true);
+
+        const response = await fetch("/api/subscribe", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email }),
+        });
+
+        if (response.ok) {
+            setStatus("Success!");
+            setEmail("");
+        } else {
+            console.log(response.status);
+            const errorData: SubscribeResponse = await response.json();
+            console.error("Error:", errorData);
+            setStatus("Failed to join waiting list. " + errorData.error);
+        }
+
+        setLoading(false);
+    };
+
     return (
         <section id="cta" className="mt-10 mb-5 lg:my-20">
             <div className="relative h-full w-full z-10 mx-auto py-12 sm:py-20">
@@ -22,18 +55,26 @@ const CTA: React.FC = () => {
                                 name="email"
                                 type="email"
                                 required
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
                                 placeholder="Enter your email"
                                 autoComplete="email"
                                 className="min-w-0 flex-auto rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
                             />
-                            <button
-                                type="submit"
+                            {loading ? <span>loading, please wait...</span> : <button
+                                // type="submit"
+                                onClick={handleSubmit}
                                 className="flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-xs hover:bg-gray-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
                             >
                                 join Now
-                            </button>
+                            </button>}
 
                         </div>
+                        {status && (
+                            <div className="mt-4 text-sm text-black-500">
+                                {status}
+                            </div>
+                        )}
                         <div className="mt-4 flex flex-col sm:flex-row items-center sm:gap-4">
 
 

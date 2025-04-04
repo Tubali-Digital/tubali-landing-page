@@ -35,48 +35,4 @@ export const benefits: IBenefit[] = [
         ],
         imageSrc: "/images/mockup-1.webp"
     },
-    // {
-    //     title: "Seamless Investing",
-    //     description: "Start building wealth today, no financial degree required. Finwise makes investing accessible and straightforward.",
-    //     bullets: [
-    //         {
-    //             title: "Micro-Investing",
-    //             description: "Begin with as little as $1 and watch your money grow.",
-    //             icon: <FiDollarSign size={26} />
-    //         },
-    //         {
-    //             title: "Expert Portfolios",
-    //             description: "Choose from investment strategies tailored to your risk tolerance.",
-    //             icon: <FiBriefcase size={26} />
-    //         },
-    //         {
-    //             title: "Real-Time Performance",
-    //             description: "Track your investments with easy-to-understand metrics and visuals.",
-    //             icon: <FiPieChart size={26} />
-    //         }
-    //     ],
-    //     imageSrc: "/images/mockup-2.webp"
-    // },
-    // {
-    //     title: "Bank-Grade Security",
-    //     description: "Your financial data deserves the best protection. Rest easy knowing Finwise employs cutting-edge security measures.",
-    //     bullets: [
-    //         {
-    //             title: "Military-Grade Encryption",
-    //             description: "Your information is safeguarded with the highest level of encryption.",
-    //             icon: <FiLock size={26} />
-    //         },
-    //         {
-    //             title: "Biometric Authentication",
-    //             description: "Access your account securely with fingerprint or facial recognition.",
-    //             icon: <FiUser size={26} />
-    //         },
-    //         {
-    //             title: "Real-Time Fraud Detection",
-    //             description: "Our system constantly monitors for suspicious activity to keep your money safe.",
-    //             icon: <FiShield size={26} />
-    //         }
-    //     ],
-    //     imageSrc: "/images/mockup-1.webp"
-    // },
 ]

@@ -29,11 +29,11 @@ export const footerDetails: {
     socials: {
         // github: 'https://github.com',
         // x: 'https://twitter.com/x',
-        twitter: 'https://twitter.com/@Z9Trade',
-        facebook: 'https://facebook.com/Z9Trade',
+        twitter: 'https://x.com/Tubali_Digital',
+        facebook: 'https://www.facebook.com/share/1C1oqoDxkh/',
         // youtube: 'https://youtube.com',
-        linkedin: 'https://www.linkedin.com/Z9Trade',
+        linkedin: 'https://www.linkedin.com/company/tubali-digital/',
         // threads: 'https://www.threads.net',
-        instagram: 'https://www.instagram.com/Z9Trade',
+        instagram: 'https://www.instagram.com/tubali_digital',
     }
 }

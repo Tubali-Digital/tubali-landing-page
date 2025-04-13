@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
                 <div className="hidden sm:mb-8 sm:flex sm:justify-center">
                     <div className="relative rounded-full px-3 py-1 text-sm/6 text-red-600 ring-1 ring-red-900/10 hover:ring-red-900/20">
                         Comming Soon.{' '}
-                        <a href="#join" className="font-semibold text-indigo-600">
+                        <a href="#cta" className="font-semibold text-indigo-600">
                             <span aria-hidden="true" className="absolute inset-0" />
                             Join waiting List...<span aria-hidden="true">&rarr;</span>
                         </a>

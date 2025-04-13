@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { heroDetails } from '@/data/hero';
+import Link from 'next/link';
 
 const Hero: React.FC = () => {
     return (
@@ -33,10 +34,12 @@ const Hero: React.FC = () => {
                     <PlayStoreButton dark />
                 </div> */}
                 <button
-                    type="submit"
+                    // type="submit"
                     className="flex-none rounded-md bg-[#050a02] mt-4 px-10 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-[#2b3a22] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
                 >
-                    join Waiting List
+                    <Link href="#cta">
+                        join Waiting List
+                    </Link>
                 </button>
 
                 <Image

@@ -33,6 +33,6 @@ export const benefits: IBenefit[] = [
                 icon: <FiTrendingUp size={26} />
             }
         ],
-        imageSrc: "/images/mockup-1.webp"
+        imageSrc: "/images/tubali-ui-p2.jpg"
     },
 ]

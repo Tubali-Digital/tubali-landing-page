@@ -41,8 +41,8 @@ const Footer: React.FC = () => {
 
                     {footerDetails.telephone && <a href={`tel:${footerDetails.telephone}`} className="block text-foreground-accent hover:text-foreground">Phone: {footerDetails.telephone}</a>}
                     <button>
-                        <Link target='_blank' href="https://forms.gle/bm21UxA8rpubtoaK8" className="block mt-5 text-sm font-semibold text-white bg-primary hover:bg-primary-accent px-8 py-3 rounded-[10px] my-1 transition-colors">
-                            Send Message Us A
+                        <Link target='_blank' href="https://forms.gle/bm21UxA8rpubtoaK8" className="block mt-5 text-sm font-semibold text-white bg-primary-accent hover:bg-[red] px-8 py-3 rounded-[10px] my-1 transition-colors">
+                            Send Us A Message
                         </Link>
                     </button>
                     {footerDetails.socials && (

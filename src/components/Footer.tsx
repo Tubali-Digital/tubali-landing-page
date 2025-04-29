@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
                 </div>
                 <div>
                     <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
-                    {footerDetails.address && <a href="#" className="block text-foreground-accent hover:text-foreground">Address: {footerDetails.address}</a>}
+                    {/* {footerDetails.address && <a href="#" className="block text-foreground-accent hover:text-foreground">Address: {footerDetails.address}</a>} */}
                     {footerDetails.email && <a href={`mailto:${footerDetails.email}`} className="block text-foreground-accent hover:text-foreground">Email: {footerDetails.email}</a>}
 
 

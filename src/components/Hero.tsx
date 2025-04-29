@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
                         Comming Soon.{' '}
                         <a href="#cta" className="font-semibold text-indigo-600">
                             <span aria-hidden="true" className="absolute inset-0" />
-                            Join waiting List...<span aria-hidden="true">&rarr;</span>
+                            Join Waiting List...<span aria-hidden="true">&rarr;</span>
                         </a>
                     </div>
                 </div>

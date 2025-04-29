@@ -4,7 +4,7 @@ export const footerDetails: {
     subheading: string;
     quickLinks: IMenuItem[];
     email: string;
-    address: string;
+    // address: string;
     telephone: string;
     socials: ISocials;
 } = {
@@ -23,7 +23,7 @@ export const footerDetails: {
             url: "#services"
         }
     ],
-    address: 'No. 33 MYCA7 Plaza, Zoo Road, Kano, Nigeria',
+    // address: 'No. 33 MYCA7 Plaza, Zoo Road, Kano, Nigeria',
     email: ' support@tubalidigital.com',
     telephone: '+234 8033850440',
     socials: {
